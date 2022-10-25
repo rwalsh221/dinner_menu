@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap');
+/* CSS REST https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing rules  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --gradient-color-dark: #785f37;
+  --gradient-color-medium: #a08c5b;
+  --graient-color-light: #cbb682;
+}
+
+html {
+  height: 100%;
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100%;
+  display: flex;
+}
+
+h1 {
+  font-family: 'Dancing Script';
+  font-weight: 700;
+  font-size: 50px;
+}
+
+header p {
+  text-align: center;
+  font-family: 'Dancing Script';
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 5px solid var(--graient-color-light);
+  width: 85%;
+  margin: 0 auto;
+}
+
+.grid_container {
+  height: 1100px;
+  width: 776px;
+  /* background-color: hotpink; */
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--gradient-color-dark),
+    var(--gradient-color-dark) 10px /* determines size */,
+    var(--gradient-color-medium) 10px,
+    var(--gradient-color-medium) 100px,
+    var(--graient-color-light) 100px,
+    var(--graient-color-light) 120px,
+
+    white 120px,
+    white 1100px /* var(--gradient-color-dark) 1100px */
+      /* var(--gradient-color-dark) 1110px  determines size  */
+  );
+  margin: auto;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  border: 1px solid black;
+}
+
+header {
+  width: 100%;
+}
+
+header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
