@@ -13,6 +13,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figure,
 blockquote,
@@ -25,6 +26,8 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* Set core root defaults */
@@ -74,6 +77,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* END OF CSS RESET */
 
 :root {
   --gradient-color-dark: #785f37;
@@ -103,14 +107,45 @@ header p {
   font-family: 'Dancing Script';
 }
 
+main {
+  padding: 0 80px;
+}
+
+main div {
+  /* width: 85%; */
+  /* margin: 0 auto; */
+}
+
+main div:not(:last-of-type) {
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--graient-color-light);
+}
+
 h2,
 h3,
-h4 {
+h4,
+h5 {
   text-transform: uppercase;
+  /* text-align: center; */
+
+  /* width: 85%; */
+  /* margin: 0 auto; */
+}
+
+h2 {
   text-align: center;
-  border-bottom: 5px solid var(--graient-color-light);
-  width: 85%;
-  margin: 0 auto;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+li {
+  padding: 2px 0;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px dotted var(--gradient-color-dark);
 }
 
 .grid_container {
@@ -143,4 +178,61 @@ header {
 header h1 {
   margin: 0 auto;
   text-align: center;
+}
+
+.drinks {
+  width: 70%;
+}
+
+.sub {
+  font-style: italic;
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  padding: 10px;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border-top: 1px solid black;
+}
+
+.footer_logo p:first-of-type {
+  font-family: 'Dancing Script';
+  font-size: 30px;
+}
+
+.footer_logo p:last-of-type {
+  font-size: 12px;
+}
+
+.footer_icon {
+  margin: 0 auto 0 150px;
+  border-top: 1px solid black;
+}
+
+.footer_icon ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icon ion-icon {
+  /* vertical-align: middle; */
+  /* height: max-content; */
+}
+
+.footer_icon ul li {
+  border-bottom: none;
+}
+
+.icon_span {
+  display: flex;
+  font-size: 40px;
 }
