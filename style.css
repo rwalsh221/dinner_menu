@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 /* CSS REST https://piccalil.li/blog/a-modern-css-reset/ */
 /* Box sizing rules  */
 *,
@@ -168,7 +169,7 @@ li:not(:last-child) {
   margin: auto;
   display: grid;
   grid-template-rows: max-content auto max-content;
-  border: 1px solid black;
+  border: 2px solid var(--gradient-color-dark);
 }
 
 header {
@@ -192,6 +193,8 @@ header h1 {
 footer {
   display: flex;
   padding: 10px;
+  border-top: 2px solid var(--gradient-color-dark);
+  width: 72%;
 }
 
 .footer_logo {
@@ -200,7 +203,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: max-content;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 .footer_logo p:first-of-type {
@@ -214,7 +217,7 @@ footer {
 
 .footer_icon {
   margin: 0 auto 0 150px;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 .footer_icon ul {
@@ -235,4 +238,9 @@ footer {
 .icon_span {
   display: flex;
   font-size: 40px;
+}
+.mooch {
+  color: hsl(66, 77%, 22%);
+  font-size: 18px;
+  font-family: 'Alfa Slab One', cursive;
 }
